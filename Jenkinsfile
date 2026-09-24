@@ -8,13 +8,6 @@ pipeline {
 
     stages {
 
-        stage('Checkout') {
-            steps {
-                git branch: 'main',
-                    url: 'https://github.com/sreeeesaaaiii/my-project.git'
-            }
-        }
-
         stage('Deploy to S3') {
             steps {
                 sh '''
@@ -30,11 +23,11 @@ pipeline {
 
     post {
         success {
-            echo 'Deployment to S3 completed successfully!'
+            echo '✅ Deployment to S3 completed successfully!'
         }
 
         failure {
-            echo 'S3 deployment failed.'
+            echo '❌ S3 deployment failed.'
         }
     }
 }
