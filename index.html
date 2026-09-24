@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DevOps CI/CD Dashboard</title>
+
+    <title>FoodRush | Food Delivery</title>
+
     <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -13,65 +15,73 @@
     <!-- Navigation -->
     <header>
         <nav class="navbar">
-            <div class="logo">DevOps<span>Lab</span></div>
+
+            <div class="logo">
+                🍔 Food<span>Rush</span>
+            </div>
 
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
-                <li><a href="#pipeline">Pipeline</a></li>
-                <li><a href="#deployment">Deployment</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#categories">Categories</a></li>
+                <li><a href="#restaurants">Restaurants</a></li>
+                <li><a href="#orders">Orders</a></li>
             </ul>
+
+            <button class="cart-btn">
+                🛒 Cart <span>2</span>
+            </button>
+
         </nav>
     </header>
 
 
-    <!-- Hero Section -->
+    <!-- Hero -->
     <section id="home" class="hero">
 
         <div class="hero-content">
 
-            <p class="tag">AWS • GITHUB • JENKINS • CI/CD</p>
+            <div class="offer">
+                🔥 50% OFF ON YOUR FIRST ORDER
+            </div>
 
             <h1>
-                My DevOps
-                <span>CI/CD Dashboard</span>
+                Delicious food,
+                <span>delivered fast.</span>
             </h1>
 
-            <p class="description">
-                A static web application automatically deployed from
-                GitHub to an AWS S3 bucket using Jenkins CI/CD.
+            <p>
+                Discover your favourite meals from the best restaurants
+                around you and get them delivered straight to your door.
             </p>
 
-            <div class="buttons">
-                <a href="#pipeline" class="btn primary">View Pipeline</a>
-                <a href="#deployment" class="btn secondary">Latest Deployment</a>
+            <div class="search-box">
+
+                <span>📍</span>
+
+                <input
+                    type="text"
+                    placeholder="Enter your delivery location"
+                >
+
+                <button>Find Food</button>
+
             </div>
 
         </div>
 
 
-        <div class="hero-card">
+        <div class="hero-food">
 
-            <div class="terminal-header">
-                <span></span>
-                <span></span>
-                <span></span>
+            <div class="food-circle">
+                🍕
             </div>
 
-            <div class="terminal">
+            <div class="floating-card card-one">
+                ⭐ 4.9 Rating
+            </div>
 
-                <p>$ git push origin main</p>
-                <p class="success">✓ Code pushed successfully</p>
-
-                <p>$ jenkins build</p>
-                <p class="success">✓ Build completed</p>
-
-                <p>$ aws s3 sync</p>
-                <p class="success">✓ Files uploaded to S3</p>
-
-                <p class="live">● APPLICATION LIVE</p>
-
+            <div class="floating-card card-two">
+                🚴 25 min delivery
             </div>
 
         </div>
@@ -79,44 +89,211 @@
     </section>
 
 
-    <!-- Pipeline Section -->
-    <section id="pipeline" class="section">
+    <!-- Categories -->
+    <section id="categories" class="section">
 
         <div class="section-title">
-            <p>WORKFLOW</p>
-            <h2>CI/CD Pipeline</h2>
+
+            <p>WHAT ARE YOU CRAVING?</p>
+
+            <h2>Explore Categories</h2>
+
         </div>
 
-        <div class="pipeline">
 
-            <div class="pipeline-step">
-                <div class="step-number">01</div>
-                <h3>Developer</h3>
-                <p>Write and update application code.</p>
+        <div class="categories">
+
+            <div class="category">
+                <div>🍕</div>
+                <h3>Pizza</h3>
             </div>
 
-            <div class="arrow">→</div>
-
-            <div class="pipeline-step">
-                <div class="step-number">02</div>
-                <h3>GitHub</h3>
-                <p>Push source code to the repository.</p>
+            <div class="category">
+                <div>🍔</div>
+                <h3>Burgers</h3>
             </div>
 
-            <div class="arrow">→</div>
-
-            <div class="pipeline-step">
-                <div class="step-number">03</div>
-                <h3>Jenkins</h3>
-                <p>Automatically build and deploy the application.</p>
+            <div class="category">
+                <div>🍜</div>
+                <h3>Noodles</h3>
             </div>
 
-            <div class="arrow">→</div>
+            <div class="category">
+                <div>🍛</div>
+                <h3>Indian</h3>
+            </div>
 
-            <div class="pipeline-step">
-                <div class="step-number">04</div>
-                <h3>AWS S3</h3>
-                <p>Host the latest version of the website.</p>
+            <div class="category">
+                <div>🌮</div>
+                <h3>Mexican</h3>
+            </div>
+
+            <div class="category">
+                <div>🍰</div>
+                <h3>Desserts</h3>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Popular Restaurants -->
+    <section id="restaurants" class="section restaurants-section">
+
+        <div class="section-title">
+
+            <p>TOP PICKS NEAR YOU</p>
+
+            <h2>Popular Restaurants</h2>
+
+        </div>
+
+
+        <div class="restaurant-grid">
+
+
+            <!-- Restaurant 1 -->
+            <div class="restaurant-card">
+
+                <div class="restaurant-image pizza-bg">
+
+                    🍕
+
+                    <span class="discount">
+                        40% OFF
+                    </span>
+
+                </div>
+
+                <div class="restaurant-info">
+
+                    <div class="restaurant-title">
+
+                        <h3>Pizza Palace</h3>
+
+                        <span class="rating">
+                            ⭐ 4.8
+                        </span>
+
+                    </div>
+
+                    <p>Pizza • Italian • Fast Food</p>
+
+                    <div class="delivery">
+                        🛵 25–30 min • ₹200 for two
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Restaurant 2 -->
+            <div class="restaurant-card">
+
+                <div class="restaurant-image burger-bg">
+
+                    🍔
+
+                    <span class="discount">
+                        30% OFF
+                    </span>
+
+                </div>
+
+                <div class="restaurant-info">
+
+                    <div class="restaurant-title">
+
+                        <h3>Burger House</h3>
+
+                        <span class="rating">
+                            ⭐ 4.7
+                        </span>
+
+                    </div>
+
+                    <p>Burgers • American • Fast Food</p>
+
+                    <div class="delivery">
+                        🛵 20–25 min • ₹250 for two
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Restaurant 3 -->
+            <div class="restaurant-card">
+
+                <div class="restaurant-image indian-bg">
+
+                    🍛
+
+                    <span class="discount">
+                        25% OFF
+                    </span>
+
+                </div>
+
+                <div class="restaurant-info">
+
+                    <div class="restaurant-title">
+
+                        <h3>Spice Kitchen</h3>
+
+                        <span class="rating">
+                            ⭐ 4.9
+                        </span>
+
+                    </div>
+
+                    <p>Indian • Biryani • South Indian</p>
+
+                    <div class="delivery">
+                        🛵 30–35 min • ₹300 for two
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Restaurant 4 -->
+            <div class="restaurant-card">
+
+                <div class="restaurant-image dessert-bg">
+
+                    🍰
+
+                    <span class="discount">
+                        20% OFF
+                    </span>
+
+                </div>
+
+                <div class="restaurant-info">
+
+                    <div class="restaurant-title">
+
+                        <h3>Sweet Heaven</h3>
+
+                        <span class="rating">
+                            ⭐ 4.6
+                        </span>
+
+                    </div>
+
+                    <p>Desserts • Cakes • Ice Cream</p>
+
+                    <div class="delivery">
+                        🛵 15–20 min • ₹180 for two
+                    </div>
+
+                </div>
+
             </div>
 
         </div>
@@ -124,169 +301,167 @@
     </section>
 
 
-    <!-- Status Section -->
-    <section class="status-section">
+    <!-- Popular Food -->
+    <section class="section">
 
-        <div class="status-card">
-            <div class="status-icon">✓</div>
+        <div class="section-title">
 
-            <div>
-                <h3>Build Status</h3>
-                <p>Successful</p>
-            </div>
+            <p>MOST ORDERED</p>
+
+            <h2>Popular Dishes</h2>
+
         </div>
 
 
-        <div class="status-card">
-            <div class="status-icon">✓</div>
+        <div class="food-grid">
 
-            <div>
-                <h3>Deployment</h3>
-                <p>Completed</p>
+
+            <div class="food-card">
+
+                <div class="food-image">
+                    🍕
+                </div>
+
+                <div class="food-details">
+
+                    <h3>Margherita Pizza</h3>
+
+                    <p>Fresh mozzarella & basil</p>
+
+                    <div class="food-bottom">
+
+                        <strong>₹249</strong>
+
+                        <button>+ Add</button>
+
+                    </div>
+
+                </div>
+
             </div>
-        </div>
 
 
-        <div class="status-card">
-            <div class="status-icon">●</div>
+            <div class="food-card">
 
-            <div>
-                <h3>Environment</h3>
-                <p>Production</p>
+                <div class="food-image">
+                    🍔
+                </div>
+
+                <div class="food-details">
+
+                    <h3>Classic Burger</h3>
+
+                    <p>Cheese, lettuce & special sauce</p>
+
+                    <div class="food-bottom">
+
+                        <strong>₹199</strong>
+
+                        <button>+ Add</button>
+
+                    </div>
+
+                </div>
+
             </div>
+
+
+            <div class="food-card">
+
+                <div class="food-image">
+                    🍛
+                </div>
+
+                <div class="food-details">
+
+                    <h3>Chicken Biryani</h3>
+
+                    <p>Fragrant basmati rice & spices</p>
+
+                    <div class="food-bottom">
+
+                        <strong>₹299</strong>
+
+                        <button>+ Add</button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="food-card">
+
+                <div class="food-image">
+                    🍜
+                </div>
+
+                <div class="food-details">
+
+                    <h3>Veg Noodles</h3>
+
+                    <p>Fresh vegetables & Asian sauce</p>
+
+                    <div class="food-bottom">
+
+                        <strong>₹179</strong>
+
+                        <button>+ Add</button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
         </div>
 
     </section>
 
 
-    <!-- NEW DEPLOYMENT FEATURE -->
-    <section id="deployment" class="deployment-section">
+    <!-- Order Tracking -->
+    <section id="orders" class="tracking-section">
 
-        <div class="deployment-container">
+        <div class="tracking-container">
 
-            <div class="deployment-label">
-                ● NEW CI/CD FEATURE
+            <div class="tracking-label">
+                🚴 LIVE ORDER TRACKING
             </div>
 
-            <h2>
-                Latest Deployment
-            </h2>
+            <h2>Your food is on the way!</h2>
 
-            <p class="deployment-description">
-                This version of the application was deployed automatically
-                from GitHub to AWS S3 through Jenkins.
+            <p>
+                Order #FR1024 is being delivered to your location.
             </p>
 
 
-            <div class="deployment-grid">
+            <div class="tracking">
 
-                <div class="deployment-box">
-                    <span>SOURCE</span>
-                    <strong>GitHub</strong>
-                    <small>my-project</small>
+                <div class="track-step completed">
+                    <div>✓</div>
+                    <span>Order Confirmed</span>
                 </div>
 
+                <div class="track-line"></div>
 
-                <div class="deployment-box">
-                    <span>BUILD</span>
-                    <strong>Jenkins</strong>
-                    <small>Build Successful</small>
+                <div class="track-step completed">
+                    <div>✓</div>
+                    <span>Preparing Food</span>
                 </div>
 
+                <div class="track-line"></div>
 
-                <div class="deployment-box">
-                    <span>TARGET</span>
-                    <strong>AWS S3</strong>
-                    <small>sai232</small>
+                <div class="track-step active">
+                    <div>🚴</div>
+                    <span>On the Way</span>
                 </div>
 
+                <div class="track-line"></div>
 
-                <div class="deployment-box">
-                    <span>STATUS</span>
-                    <strong class="deployment-live">
-                        ● LIVE
-                    </strong>
-                    <small>Deployment Completed</small>
-                </div>
-
-            </div>
-
-
-            <div class="deployment-success">
-                ✓ Latest version successfully deployed
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- Projects -->
-    <section id="projects" class="section">
-
-        <div class="section-title">
-            <p>MY WORK</p>
-            <h2>DevOps Projects</h2>
-        </div>
-
-
-        <div class="projects">
-
-            <div class="project-card">
-
-                <div class="project-icon">☁</div>
-
-                <h3>AWS S3 Website</h3>
-
-                <p>
-                    Static website hosting using an AWS S3 bucket
-                    with automated deployment.
-                </p>
-
-                <div class="tech">
-                    <span>AWS</span>
-                    <span>S3</span>
-                    <span>HTML</span>
-                </div>
-
-            </div>
-
-
-            <div class="project-card">
-
-                <div class="project-icon">⚙</div>
-
-                <h3>Terraform Infrastructure</h3>
-
-                <p>
-                    Infrastructure automation using Terraform
-                    to provision AWS resources.
-                </p>
-
-                <div class="tech">
-                    <span>Terraform</span>
-                    <span>AWS</span>
-                    <span>IaC</span>
-                </div>
-
-            </div>
-
-
-            <div class="project-card">
-
-                <div class="project-icon">🚀</div>
-
-                <h3>CI/CD Pipeline</h3>
-
-                <p>
-                    Automated application deployment from GitHub
-                    to AWS using Jenkins.
-                </p>
-
-                <div class="tech">
-                    <span>GitHub</span>
-                    <span>Jenkins</span>
-                    <span>AWS</span>
+                <div class="track-step">
+                    <div>🏠</div>
+                    <span>Delivered</span>
                 </div>
 
             </div>
@@ -296,48 +471,38 @@
     </section>
 
 
-    <!-- Technologies -->
-    <section class="technologies">
+    <!-- CTA -->
+    <section class="cta">
 
-        <div class="section-title">
-            <p>TECH STACK</p>
-            <h2>DevOps Technologies</h2>
-        </div>
-
-
-        <div class="tech-list">
-
-            <span>AWS</span>
-            <span>EC2</span>
-            <span>S3</span>
-            <span>IAM</span>
-            <span>Terraform</span>
-            <span>Git</span>
-            <span>GitHub</span>
-            <span>Jenkins</span>
-            <span>Linux</span>
-            <span>Docker</span>
-
-        </div>
-
-    </section>
-
-
-    <!-- Contact -->
-    <footer id="contact">
-
-        <h2>DevOps Engineer Portfolio</h2>
+        <h2>Hungry? Let's fix that. 😋</h2>
 
         <p>
-            Built to demonstrate GitHub → Jenkins → AWS S3 CI/CD deployment.
+            Order your favourite food and enjoy it at your doorstep.
+        </p>
+
+        <button>
+            Order Now →
+        </button>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <div class="logo">
+            🍔 Food<span>Rush</span>
+        </div>
+
+        <p>
+            Fast food delivery made simple.
         </p>
 
         <p class="footer-note">
-            © 2026 DevOpsLab • CI/CD Deployment Demo
+            © 2026 FoodRush • CI/CD Deployment Demo
         </p>
 
     </footer>
-
 
 </body>
 </html>
