@@ -1,235 +1,45 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DevOps CI/CD Dashboard</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
+```html
+<!-- Live Deployment Monitor -->
+<section class="deployment-monitor">
 
-<body>
+    <div class="monitor-content">
+        <div class="monitor-label">● LIVE DEPLOYMENT</div>
 
-    <!-- Navigation -->
-    <header>
-        <nav class="navbar">
-            <div class="logo">DevOps<span>Lab</span></div>
-
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#pipeline">Pipeline</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <p class="tag">AWS • GITHUB • CI/CD</p>
-
-            <h1>
-                My DevOps
-                <span>CI/CD Dashboard</span>
-            </h1>
-
-            <p class="description">
-                A simple static web application deployed automatically
-                from GitHub to an AWS S3 bucket using CI/CD.
-            </p>
-
-            <div class="buttons">
-                <a href="#pipeline" class="btn primary">View Pipeline</a>
-                <a href="#projects" class="btn secondary">My Projects</a>
-            </div>
-        </div>
-
-        <div class="hero-card">
-            <div class="terminal-header">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-
-            <div class="terminal">
-                <p>$ git push origin main</p>
-                <p class="success">✓ Code pushed successfully</p>
-
-                <p>$ pipeline deploy</p>
-                <p class="success">✓ Build completed</p>
-                <p class="success">✓ S3 deployment completed</p>
-
-                <p class="live">● APPLICATION LIVE</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Pipeline Section -->
-    <section id="pipeline" class="section">
-        <div class="section-title">
-            <p>WORKFLOW</p>
-            <h2>CI/CD Pipeline</h2>
-        </div>
-
-        <div class="pipeline">
-
-            <div class="pipeline-step">
-                <div class="step-number">01</div>
-                <h3>Developer</h3>
-                <p>Write and update application code.</p>
-            </div>
-
-            <div class="arrow">→</div>
-
-            <div class="pipeline-step">
-                <div class="step-number">02</div>
-                <h3>GitHub</h3>
-                <p>Push source code to the repository.</p>
-            </div>
-
-            <div class="arrow">→</div>
-
-            <div class="pipeline-step">
-                <div class="step-number">03</div>
-                <h3>CI/CD</h3>
-                <p>Automatically validate and deploy changes.</p>
-            </div>
-
-            <div class="arrow">→</div>
-
-            <div class="pipeline-step">
-                <div class="step-number">04</div>
-                <h3>AWS S3</h3>
-                <p>Deploy the website to the S3 bucket.</p>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Status Section -->
-    <section class="status-section">
-
-        <div class="status-card">
-            <div class="status-icon">✓</div>
-            <div>
-                <h3>Build Status</h3>
-                <p>Successful</p>
-            </div>
-        </div>
-
-        <div class="status-card">
-            <div class="status-icon">✓</div>
-            <div>
-                <h3>Deployment</h3>
-                <p>Completed</p>
-            </div>
-        </div>
-
-        <div class="status-card">
-            <div class="status-icon">●</div>
-            <div>
-                <h3>Environment</h3>
-                <p>Production</p>
-            </div>
-        </div>
-
-    </section>
-
-    <!-- Projects -->
-    <section id="projects" class="section">
-
-        <div class="section-title">
-            <p>MY WORK</p>
-            <h2>DevOps Projects</h2>
-        </div>
-
-        <div class="projects">
-
-            <div class="project-card">
-                <div class="project-icon">☁</div>
-                <h3>AWS S3 Website</h3>
-                <p>
-                    Static website hosting using an AWS S3 bucket
-                    with automated deployment.
-                </p>
-
-                <div class="tech">
-                    <span>AWS</span>
-                    <span>S3</span>
-                    <span>HTML</span>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-icon">⚙</div>
-                <h3>Terraform Infrastructure</h3>
-                <p>
-                    Infrastructure automation using Terraform
-                    to provision AWS resources.
-                </p>
-
-                <div class="tech">
-                    <span>Terraform</span>
-                    <span>AWS</span>
-                    <span>IaC</span>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-icon">🚀</div>
-                <h3>CI/CD Pipeline</h3>
-                <p>
-                    Automated application deployment from GitHub
-                    to AWS using a CI/CD workflow.
-                </p>
-
-                <div class="tech">
-                    <span>GitHub</span>
-                    <span>CI/CD</span>
-                    <span>AWS</span>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Technologies -->
-    <section class="technologies">
-
-        <div class="section-title">
-            <p>TECH STACK</p>
-            <h2>Tools I'm Learning</h2>
-        </div>
-
-        <div class="tech-list">
-            <span>AWS</span>
-            <span>EC2</span>
-            <span>S3</span>
-            <span>IAM</span>
-            <span>Terraform</span>
-            <span>Git</span>
-            <span>GitHub</span>
-            <span>Jenkins</span>
-            <span>Linux</span>
-            <span>Docker</span>
-        </div>
-
-    </section>
-
-    <!-- Contact -->
-    <footer id="contact">
-
-        <h2>DevOps Engineer Portfolio</h2>
+        <h2>Deployment Monitor</h2>
 
         <p>
-            Built to demonstrate GitHub → CI/CD → AWS S3 deployment.
+            This section was added through a new GitHub commit
+            and deployed automatically to AWS S3 using Jenkins CI/CD.
         </p>
 
-        <p class="footer-note">
-            © 2026 DevOpsLab • CI/CD Deployment Demo
-        </p>
+        <div class="deployment-info">
 
-    </footer>
+            <div class="info-box">
+                <span>PIPELINE</span>
+                <strong>Jenkins</strong>
+            </div>
 
-</body>
-</html>
+            <div class="info-box">
+                <span>SOURCE</span>
+                <strong>GitHub</strong>
+            </div>
+
+            <div class="info-box">
+                <span>TARGET</span>
+                <strong>AWS S3</strong>
+            </div>
+
+            <div class="info-box">
+                <span>STATUS</span>
+                <strong class="online">● LIVE</strong>
+            </div>
+
+        </div>
+
+        <div class="deployment-message">
+            ✓ Latest version successfully deployed
+        </div>
+    </div>
+
+</section>
+```
